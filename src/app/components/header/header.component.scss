@@ -1,0 +1,19 @@
+@import "../../../assets/scss/mixins";
+
+.header {
+  background-color: #232323;
+  position: relative;
+  padding: 15px 10px;
+
+  .title {
+    color: white;
+    margin-left: 30px;
+    font-weight: bold;
+    @include align-vertical
+  }
+
+  .logo {
+    margin-top: 10px;
+    @include display-icon(24px, 24px, "../../../assets/img/icon_position_blue.svg");
+  }
+}

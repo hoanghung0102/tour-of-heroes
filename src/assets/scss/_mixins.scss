@@ -1,0 +1,33 @@
+@import "variables";
+
+@mixin align-middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+@mixin align-vertical {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin break-word {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+@mixin text-truncate {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@mixin display-icon($width, $height, $url) {
+  width: $width;
+  height: $height;
+  background: url($url) no-repeat;
+  background-size: contain;
+}
