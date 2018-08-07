@@ -21,6 +21,7 @@
 }
 
 @import './assets/scss/variables';
+@import './assets/scss/mixins';
 
 body {
   color: $text-color;
@@ -36,4 +37,8 @@ body {
   color: white;
   font-size: 12px;
   outline: none;
+}
+
+.box-shadow {
+  @include shadow-box
 }

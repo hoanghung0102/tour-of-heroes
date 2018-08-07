@@ -1,0 +1,28 @@
+@import "../../../assets/scss/mixins";
+
+.hero-list {
+  .title {
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .container {
+    margin-top: 15px;
+  }
+
+  .hero-block {
+    width: 100px;
+    height: 100px;
+    background-color: #5090ee;
+    margin: 0 auto;
+    font-weight: bold;
+    color: white;
+    @include shadow-box;
+    cursor: pointer;
+
+    span {
+      @include align-vertical;
+      @include align-middle;
+    }
+  }
+}
