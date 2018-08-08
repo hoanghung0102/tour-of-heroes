@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RoutingModule } from './routing/routing.module';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { HttpClientModule } from "@angular/common/http";
 
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
@@ -10,6 +12,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { PagesComponent } from './pages/pages.component';
 import { HeroComponent } from './components/heroes/hero/hero.component';
+import { ImMemoryDataService } from './service/im-memory-data.service'
 
 @NgModule({
   declarations: [
@@ -24,6 +27,10 @@ import { HeroComponent } from './components/heroes/hero/hero.component';
   imports: [
     BrowserModule,
     RoutingModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      ImMemoryDataService, {passThruUnknownUrl: true, dataEncapsulation: false}
+    ),
     NgbModule.forRoot()
   ],
   providers: [],

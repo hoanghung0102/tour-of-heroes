@@ -1,0 +1,33 @@
+@import "../../../assets/scss/mixins";
+@import "../../../assets/scss/variables";
+
+.dash-board {
+  .title {
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .container {
+    margin-top: 15px;
+  }
+
+  .hero-block {
+    width: 100px;
+    height: 100px;
+    background-color: $background-color;
+    margin: 0 auto;
+    font-weight: bold;
+    @include shadow-box;
+    cursor: pointer;
+
+    span {
+      color: white;
+      @include align-vertical;
+      @include align-middle;
+    }
+
+    &:hover {
+      background-color: #5090ee;
+    }
+  }
+}

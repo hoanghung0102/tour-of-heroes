@@ -1,4 +1,5 @@
 @import "../../../assets/scss/mixins";
+@import "../../../assets/scss/variables";
 
 .hero-list {
   .title {
@@ -6,23 +7,39 @@
     font-weight: bold;
   }
 
-  .container {
-    margin-top: 15px;
-  }
-
-  .hero-block {
-    width: 100px;
-    height: 100px;
-    background-color: #5090ee;
-    margin: 0 auto;
-    font-weight: bold;
-    color: white;
+  .hero-details {
     @include shadow-box;
     cursor: pointer;
+    display: flex;
 
-    span {
-      @include align-vertical;
-      @include align-middle;
+    .id {
+      width: 10%;
+      text-align: center;
+      color: white;
+      border-radius: 4px 0 0 4px;
+      background-color: $background-color;
     }
+
+    .name {
+      padding-left: 50px;
+      opacity: 0.7;
+      width: 90%;
+    }
+
+    .btn {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    &:hover {
+      .name {
+        opacity: 1;
+        background-color: white;
+      }
+    }
+  }
+
+  .hero-details + .hero-details {
+    margin-top: 3px;
   }
 }

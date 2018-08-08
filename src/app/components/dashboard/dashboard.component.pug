@@ -1,0 +1,7 @@
+.dash-board(*ngIf="heroes")
+  h6.title Top Heroes
+  .container
+    .row
+      .col(*ngFor="let hero of heroes")
+        .hero-block(routerLink="/hero-profile/{{hero.id }}")
+          span {{ hero.name }}

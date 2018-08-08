@@ -1,14 +1,13 @@
-.hero-profile
-  .title Magneta details!
+.hero-profile(*ngIf="hero")
+  .title {{ hero.name | uppercase }} details!
   .content
     form
       .form-group.row
         label.col-sm-2.col-form-label(for='id') Id
         .col-sm-10
-          input#id.form-control-plaintext(type='text', readonly='', value='15')
+          input#id.form-control-plaintext(type='text', readonly='', value='{{ hero.id }}')
       .form-group.row
         label.col-sm-2.col-form-label(for='name') Password
         .col-sm-10
-          input#name.form-control(type='text')
-
-    .btn Back
+          input#name.form-control(type='text', value='{{ hero.name }}')
+    .btn(routerLink="/main-page") Back

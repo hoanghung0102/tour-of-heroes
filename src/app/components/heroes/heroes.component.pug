@@ -1,16 +1,7 @@
-.hero-list
-  h6.title Top Heroes
-  .container
-    .row
-      .col
-        .hero-block
-          span Narco
-      .col
-        .hero-block
-          span Bombasto
-      .col
-        .hero-block
-          span Celeritas
-      .col
-        .hero-block
-          span Magneta
+.hero-list(*ngIf="heroes")
+  .title My Heroes
+  .content-list
+    .hero-details(*ngFor="let hero of heroes")
+      .id {{ hero.id }}
+      .name(routerLink="/hero-profile/{{hero.id }}") {{ hero.name }}
+      .btn.delete Delete

@@ -1,7 +1,8 @@
 @import "../../../assets/scss/mixins";
+@import "../../../assets/scss/variables";
 
 .header {
-  background-color: #232323;
+  background-color: $background-color;
   position: relative;
   padding: 15px 10px;
 
