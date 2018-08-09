@@ -9,5 +9,5 @@
       .form-group.row
         label.col-sm-2.col-form-label(for='name') Password
         .col-sm-10
-          input#name.form-control(type='text', value='{{ hero.name }}')
+          input#name.form-control(type='text', [(ngModel)]="hero.name", name="name")
     .btn(routerLink="/main-page") Back
