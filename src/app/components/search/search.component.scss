@@ -1,0 +1,46 @@
+@import "../../../assets/scss/mixins";
+
+.autocomplete-search {
+  input.name-search {
+    width: 100px;
+    padding: 5px 2px 2px 28px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    background-image: url("../../../assets/img/header-search-icon.svg");
+    background-position: 10px 12px;
+    background-repeat: no-repeat;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+
+    &:focus {
+      width: 180px;
+    }
+  }
+
+  ul.ui-autocomple {
+    padding-left: 28px;
+    list-style: none;
+    position: absolute;
+    margin-top: 0;
+    margin-bottom: 10px;
+    z-index: 2002;
+  }
+
+  li {
+    display: block;
+    opacity: 0.8;
+    @include shadow-box;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+      background-color: #5090ee;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}

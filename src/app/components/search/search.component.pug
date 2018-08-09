@@ -1,0 +1,6 @@
+.autocomplete-search
+  input.name-search(name="search" placeholder="Search..." type="text")
+  .search-result
+    ul.ui-autocomple
+      li(*ngFor="let hero of heroes")
+        a(routerLink="/hero-profile/{{hero.id }}") {{ hero.name }}

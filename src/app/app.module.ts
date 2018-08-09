@@ -15,6 +15,7 @@ import { HeroComponent } from './components/heroes/hero/hero.component';
 import { ImMemoryDataService } from './service/im-memory-data.service'
 import { ColorDirective} from './ultility/color.directive';
 import { FormsModule } from "@angular/forms";
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FormsModule } from "@angular/forms";
     HeaderComponent,
     PagesComponent,
     HeroComponent,
-    ColorDirective
+    ColorDirective,
+    SearchComponent
   ],
   imports: [
     FormsModule,
