@@ -5,16 +5,41 @@
   background-color: $background-color;
   position: relative;
   padding: 15px 10px;
+  display: flex;
+  justify-content: space-between;
 
   .title {
     color: white;
     margin-left: 30px;
     font-weight: bold;
-    @include align-vertical
+    @include align-vertical;
   }
 
   .logo {
     margin-top: 10px;
     @include display-icon(24px, 24px, "../../../assets/img/icon_position_blue.svg");
+  }
+
+  .header-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    input.name-search {
+      width: 100px;
+      padding: 5px 2px 2px 28px;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      background-color: white;
+      background-image: url("../../../assets/img/header-search-icon.svg");
+      background-position: 10px 12px;
+      background-repeat: no-repeat;
+      -webkit-transition: width 0.4s ease-in-out;
+      transition: width 0.4s ease-in-out;
+
+      &:focus {
+        width: 180px;
+      }
+    }
   }
 }

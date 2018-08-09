@@ -1,7 +1,7 @@
 .hero-profile(*ngIf="hero")
   .title {{ hero.name | uppercase }} details!
   .content
-    form
+    form(#f="ngForm", (submit)="onFormSubmitted(f)")
       .form-group.row
         label.col-sm-2.col-form-label(for='id') Id
         .col-sm-10

@@ -1,4 +1,7 @@
 .header.box-shadow
-  a(routerLink="/main-page")
-    .logo
-    span.title Tour of Heroes
+  .header-left
+    a(routerLink="/main-page")
+      .logo
+      span.title Tour of Heroes
+  .header-right
+    input.name-search(name="search" placeholder="Search..." type="text")

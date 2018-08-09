@@ -2,6 +2,7 @@ import {Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router'
 import {HeroService} from "../../../service/hero.service";
 import {Hero} from "../../../entity/hero";
+import {NgForm} from "@angular/forms";
 
 @Component({
   selector: 'app-hero',
@@ -21,5 +22,9 @@ export class HeroComponent implements OnInit {
 
     this.service.getHeroById(this.id)
       .subscribe(hero => this.hero = hero);
+  }
+
+  public onFormSubmitted(form: NgForm) {
+    console.log(form);
   }
 }
