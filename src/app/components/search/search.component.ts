@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {HeroService} from "../../service/hero.service";
 import {Hero} from "../../entity/hero";
+import {Subject} from "rxjs/internal/Subject";
 
 @Component({
   selector: 'app-search',
@@ -9,12 +10,27 @@ import {Hero} from "../../entity/hero";
 })
 export class SearchComponent implements OnInit {
 
-  heroes : Hero[];
+  heroes :  Hero[];
+
+  searchText: string = "";
+
+  searchTerms = new Subject<string>();
 
   constructor(private service: HeroService) { }
 
   ngOnInit() {
-    this.service.getHeroes()
-      .subscribe(heroes => this.heroes = heroes)
+
+    this.searchTerms.subscribe(
+      () => {
+        this.service.searchHeroes(this.searchTerms)
+          .subscribe(heroes => {
+            this.heroes = heroes
+          })
+      }
+    )
+  }
+
+  searchTextChange(term : string) {
+      this.searchTerms.next(term);
   }
 }

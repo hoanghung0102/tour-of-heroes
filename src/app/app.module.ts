@@ -16,6 +16,8 @@ import { ImMemoryDataService } from './service/im-memory-data.service'
 import { ColorDirective} from './ultility/color.directive';
 import { FormsModule } from "@angular/forms";
 import { SearchComponent } from './components/search/search.component';
+import { EmiteventComponent } from './components/emit-event/emitevent/emitevent.component';
+import { EventimplComponent } from './components/emit-event/eventimpl/eventimpl.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { SearchComponent } from './components/search/search.component';
     PagesComponent,
     HeroComponent,
     ColorDirective,
-    SearchComponent
+    SearchComponent,
+    EmiteventComponent,
+    EventimplComponent
   ],
   imports: [
     FormsModule,

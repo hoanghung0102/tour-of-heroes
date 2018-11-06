@@ -1,6 +1,6 @@
 .autocomplete-search
-  input.name-search(name="search" placeholder="Search..." type="text")
-  .search-result
+  input.name-search(name="search" placeholder="Search..." type="text", [ngModel]="searchText", (keyup)="searchTextChange(searchText)")
+  .search-result(*ngIf="heroes")
     ul.ui-autocomple
       li(*ngFor="let hero of heroes")
         a(routerLink="/hero-profile/{{hero.id }}") {{ hero.name }}

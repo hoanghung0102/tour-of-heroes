@@ -5,6 +5,7 @@ import {DashboardComponent} from "../components/dashboard/dashboard.component";
 import {HeroesComponent} from "../components/heroes/heroes.component";
 import {HeroComponent} from "../components/heroes/hero/hero.component";
 import {PagesComponent} from "../pages/pages.component";
+import {EventimplComponent} from "../components/emit-event/eventimpl/eventimpl.component";
 
 // Create router list
 const routers: Routes = [
@@ -12,6 +13,7 @@ const routers: Routes = [
   {path: 'main-page', component: PagesComponent},
   {path: 'dashboard', component:  DashboardComponent},
   {path: 'heroes', component:  HeroesComponent},
+  {path: 'event-emit', component:  EventimplComponent},
   {path: 'hero-profile/:id', component: HeroComponent}
 ];
 

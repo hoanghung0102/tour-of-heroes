@@ -1,0 +1,6 @@
+#event-impl(*ngIf="heroes")
+  h6.title Top Heroes
+  .container(#container)
+    .row
+      .col(*ngFor="let hero of heroes")
+        app-emitevent([hero]="hero", [bgColor]="bgColor", (inactiveRemainHero)="adjustedColorHero($event)")
