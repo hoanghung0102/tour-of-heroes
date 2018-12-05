@@ -1,0 +1,7 @@
+.reactive-stream
+  .form-group
+    label(for='usr') Name:
+    input#usr.form-control(type='text', [(ngModel)]="hero.sex")
+
+  div
+    span Message input: {{ hero.sex }}

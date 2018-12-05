@@ -13,11 +13,14 @@ import { HeaderComponent } from './components/header/header.component';
 import { PagesComponent } from './pages/pages.component';
 import { HeroComponent } from './components/heroes/hero/hero.component';
 import { ImMemoryDataService } from './service/im-memory-data.service'
-import { ColorDirective} from './ultility/color.directive';
-import { FormsModule } from "@angular/forms";
+import { ColorDirective } from './ultility/color.directive';
+import { ReactiveFormsModule } from "@angular/forms";
 import { SearchComponent } from './components/search/search.component';
 import { EmiteventComponent } from './components/emit-event/emitevent/emitevent.component';
 import { EventimplComponent } from './components/emit-event/eventimpl/eventimpl.component';
+import { ReactiveStreamComponent } from './components/reactive-stream/reactive-stream.component';
+import { AngFormComponent } from './components/ang-form/ang-form.component';
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -31,13 +34,16 @@ import { EventimplComponent } from './components/emit-event/eventimpl/eventimpl.
     ColorDirective,
     SearchComponent,
     EmiteventComponent,
-    EventimplComponent
+    EventimplComponent,
+    ReactiveStreamComponent,
+    AngFormComponent
   ],
   imports: [
     FormsModule,
     BrowserModule,
     RoutingModule,
     HttpClientModule,
+    ReactiveFormsModule,
     HttpClientInMemoryWebApiModule.forRoot(
       ImMemoryDataService, {passThruUnknownUrl: true, dataEncapsulation: false}
     ),

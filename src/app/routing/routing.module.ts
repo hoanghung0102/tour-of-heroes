@@ -6,6 +6,7 @@ import {HeroesComponent} from "../components/heroes/heroes.component";
 import {HeroComponent} from "../components/heroes/hero/hero.component";
 import {PagesComponent} from "../pages/pages.component";
 import {EventimplComponent} from "../components/emit-event/eventimpl/eventimpl.component";
+import {AngFormComponent} from "../components/ang-form/ang-form.component";
 
 // Create router list
 const routers: Routes = [
@@ -14,7 +15,8 @@ const routers: Routes = [
   {path: 'dashboard', component:  DashboardComponent},
   {path: 'heroes', component:  HeroesComponent},
   {path: 'event-emit', component:  EventimplComponent},
-  {path: 'hero-profile/:id', component: HeroComponent}
+  {path: 'hero-profile/:id', component: HeroComponent},
+  {path: 'register', component: AngFormComponent}
 ];
 
 @NgModule({
