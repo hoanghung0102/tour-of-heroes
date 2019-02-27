@@ -1,0 +1,7 @@
+.full-activities
+  .title
+  .warpper-blocks
+    ng-container(*ngFor="let block of activityBlocks")
+      app-dynamic-instant-component([blockToken]="block", [entity]="entity" )
+
+

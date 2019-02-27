@@ -3,18 +3,18 @@
     .form-row
       .form-group
         label(for='fullName') Full-name
-        input#fullName.form-control(type='text', placeholder="Full name", formControlName="name")
+        input#fullName.form-control(type='text', placeholder="Full name")
     .form-group
       label(for='age') Age
-        select#age.form-control(formControlName="age")
+        select#age.form-control
           option(*ngFor="let myAge of rangeAges", [value]="myAge") {{ myAge }}
     .form-group
       label(for='hobbies') Favorite
-        select#hobbies.form-control(formControlName="hobbie")
+        select#hobbies.form-control
           option(*ngFor="let myHobbie of hobbies", [value]="myHobbie") {{ myHobbie }}
     .form-group
       .form-check
-        input#sex.form-check-input(type='checkbox', formControlName="sex")
+        input#sex.form-check-input(type='checkbox')
         label.form-check-label(for='sex')
           | Check me out if not male
 

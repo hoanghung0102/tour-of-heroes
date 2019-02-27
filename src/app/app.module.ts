@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { DynamicComponentModule } from './dynamic-component/dynamic-component.module';
 import { RoutingModule } from './routing/routing.module';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { HttpClientModule } from "@angular/common/http";
@@ -13,6 +14,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { PagesComponent } from './pages/pages.component';
 import { HeroComponent } from './components/heroes/hero/hero.component';
 import { ImMemoryDataService } from './service/im-memory-data.service'
+import { TodoStoreService } from './service/todos-store.service';
 import { ColorDirective } from './ultility/color.directive';
 import { ReactiveFormsModule } from "@angular/forms";
 import { SearchComponent } from './components/search/search.component';
@@ -44,12 +46,13 @@ import { FormsModule } from "@angular/forms";
     RoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    DynamicComponentModule,
     HttpClientInMemoryWebApiModule.forRoot(
       ImMemoryDataService, {passThruUnknownUrl: true, dataEncapsulation: false}
     ),
     NgbModule.forRoot()
   ],
-  providers: [],
+  providers: [TodoStoreService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -18,11 +18,11 @@ export class AngFormComponent implements OnInit {
     return [18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
   }
 
-  constructor() {
+  constructor() {}
+
+  ngOnInit() {
     this.profileForm = this.createFormGroup();
   }
-
-  ngOnInit() {}
 
   public onSubmit(event) {
     console.log(event);
